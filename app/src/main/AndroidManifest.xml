@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".EditActivity" />
         <activity android:name=".QuestionsActivity" />
-        <activity android:name=".RandomActivity"></activity>
+        <activity android:name=".RandomActivity" />
+        <activity android:name=".CoinActivity"></activity>
     </application>
 
 </manifest>

@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.img_feature).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RandomActivity.class));
+               // startActivity(new Intent(MainActivity.this, RandomActivity.class));
+                startActivity(new Intent(MainActivity.this, CoinActivity.class));
             }
         });
         findViewById(R.id.tv_turntable).setOnClickListener(new View.OnClickListener() {
