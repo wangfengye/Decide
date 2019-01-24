@@ -14,6 +14,8 @@ import com.maple.decide.bean.Question;
 import com.maple.decide.bean.QuestionMap;
 import com.maple.decide.view.Turntable;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     public static final String QUESTIONS = "questions";
     private Turntable mTurntable;
@@ -36,7 +38,12 @@ public class MainActivity extends AppCompatActivity {
         mTurntable = findViewById(R.id.turntable);
         mTvTitle = findViewById(R.id.tv_title);
         mTvRes = findViewById(R.id.tv_res);
-
+        findViewById(R.id.img_feature).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RandomActivity.class));
+            }
+        });
         findViewById(R.id.tv_turntable).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static Question getQuestion() {
         QuestionMap ma = LattePreference.getJson(QUESTIONS, QuestionMap.class);
-        Log.i("TAG", "getQuestion: " + JSON.toJSONString(ma));
         if (ma == null) ma = new QuestionMap();
         return ma.last();
     }

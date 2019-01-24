@@ -12,7 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:elevation="2dp">
+        <ImageView
+            android:id="@+id/img_feature"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
 
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:src="@mipmap/ic_feature"
+            android:layout_toStartOf="@+id/img_set"
+            android:tint="@color/colorAccent" />
         <ImageView
             android:id="@+id/img_set"
             android:layout_width="48dp"
